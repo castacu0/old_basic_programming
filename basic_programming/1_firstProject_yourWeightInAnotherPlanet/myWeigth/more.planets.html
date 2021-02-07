@@ -1,0 +1,77 @@
+<!doctype hmtl>
+<html>
+  <head>
+    <title>Interplanetary Weight</title>
+    <style>
+      body
+      {
+          font-family: Helvetica;
+      }
+      strong
+      {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center;">Your weight in other planet</h1>
+    <p>Today I'm gonna give you your weight on another planet.</p>
+    <script>
+      var user = prompt("What is your weight in Kilograms?");
+      var planet = parseInt(prompt("Chose your planet:\n1 = Mercury. \n2 = Venus. \n3 = Mars. \n4 = Jupiter. \n5 = Saturn. \n6 = Uranus. "));
+      var weight = parseInt(user);
+      var g_mercury = 2.7;
+      var g_venus = 8.8;        
+      var g_earth = 9.8;
+      var g_mars = 3.7;
+      var g_jupiter = 24.8;
+      var g_saturn = 9;
+      var g_uranus = 7.7;
+      var g_neptune = 11;
+      var name;
+      var final_weight;
+      if(planet == 1)
+      {
+          final_weight = weight * g_mercury / g_earth;
+          name = "Mercury"
+      }
+      else if(planet == 2)
+      {
+          final_weight = weight * g_venus / g_earth;
+          name = "Venus"
+      }
+      else if(planet == 3)
+      {
+          final_weight = weight * g_mars / g_earth;
+          name = "Mars"
+      }
+      else if(planet == 4)
+      {
+          final_weight = weight * g_jupiter / g_earth;
+          name = "Jupiter"
+      }
+      else if(planet == 5)
+      {
+          final_weight = weight * g_saturn / g_earth;
+          name = "Saturn"
+      }
+      else if(planet == 6)
+      {
+          final_weight = weight * g_uranus / g_earth;
+          name = "Uranus"
+      }
+      else
+      {
+          final_weight = 1000000;
+          name = "GORDOLANDIA"
+          document.write("You're so FAT!");
+          document.write("<br><br>");
+      }
+      final_weight = parseInt(final_weight);
+      document.write("Ahí tiene mi rey, dios.");
+      document.write("<br><br>");
+      document.write(" My weight in<strong> " + name + "</strong> is <strong> " + final_weight + " kg. </stong>");
+
+    </script>
+  </body>
+</html>

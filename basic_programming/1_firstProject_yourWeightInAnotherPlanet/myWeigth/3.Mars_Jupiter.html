@@ -1,0 +1,45 @@
+<!doctype hmtl>
+<html>
+  <head>
+    <title>Interplanetary Weight</title>
+    <style>
+      body
+      {
+        background-color: #f1ffa1;
+        font-family: Helvetica;
+      }
+      strong
+      {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Your weight in other planet</h1>
+    <p>Good news, on Mars you weight less than on Earth.</p>
+    <script>
+      var user = prompt("What is your weight in Kilograms?");
+      var planet = parseInt(prompt("Chose your planet:\n1 is Mars, 2 is Jupiter."));
+      var weight = parseInt(user);
+      var g_earth = 9.8;
+      var g_mars = 3.7;
+      var g_jupiter = 24.8;
+      var final_weight;
+      if(planet == 1)
+      {
+          final_weight = weight * g_mars / g_earth;
+      }
+      else if(planet == 2)
+      {
+          final_weight = weight * g_jupiter / g_earth;
+      }
+      else
+      {
+          final_weight = 1000000;
+      }
+      final_weight = parseInt(final_weight);
+      document.write(" My weight on mars is <strong> " + final_weight + " kg. </stong>");
+
+    </script>
+  </body>
+</html>
